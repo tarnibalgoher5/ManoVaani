@@ -38,9 +38,14 @@ function MainMenu() {
         <div className="service-item">
           <img src="/chatbot.png" alt="Chatbot" className="service-image-left" />
           <div className="service-info">
-            <Link to="/chatbot" className="service-link">
-              <h3>Mental Health Chatbot</h3>
-            </Link>
+          <h3>
+            <a href="https://manovaani-chatbot.streamlit.app/" 
+              className="chatbot-link"
+              target="_blank" 
+            >
+            Mental Health Chatbot
+            </a>
+            </h3>
             <p className="service-desc">
               An intelligent conversational bot to guide you through tough times, answer your questions, and offer comfort.
             </p>
