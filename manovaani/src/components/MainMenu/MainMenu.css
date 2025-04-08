@@ -32,7 +32,7 @@ background-color:  #c8ffc5;
 }
 
 .site-title {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: bold;
   margin: 0 0 10px 0;
 }
@@ -47,6 +47,10 @@ background-color:  #c8ffc5;
   margin:0;
 }
 
+.intro-image{
+  width: 30%;
+  height:20%
+}
 .site-desc2{
   font-size: 18px;
   color: grey;

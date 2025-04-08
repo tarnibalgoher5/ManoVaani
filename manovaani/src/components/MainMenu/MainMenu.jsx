@@ -1,6 +1,7 @@
 import React from 'react';
 import './MainMenu.css';
 import { Link } from 'react-router-dom'; // Import Link for routing
+import logo from '../../assets/logo.png';
 
 function MainMenu() {
   return (
@@ -9,12 +10,12 @@ function MainMenu() {
       {/* Section 1: Website Title and Intro */}
       <div className="section-intro">
         <div className="intro-text">
-          {/* <h1 className="site-title">manovaani</h1>  */}
+          <p className='site-title'>manovaani</p>
           <p className="site-description">your safe haven powered with AI-driven care </p> 
           <p className='site-desc2'> manovaani is your digital companion for emotional wellness</p>
         </div>
         <div className="intro-image">
-          <img src="/intro-image.png" alt="Mental Health" />
+          <img src={logo} alt="Mental Health" />
         </div>
       </div>
 
