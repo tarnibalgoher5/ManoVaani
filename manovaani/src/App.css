@@ -11,6 +11,7 @@
   --background-color :  #fdfdfd; /*white shade*/
   --accent-color : #f6907d; /*  coral pink */
   --text-color : #000000; 
+  --text-highlight-color: #245539; /*dark green */
 }
 
 .logo {

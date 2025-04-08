@@ -2,6 +2,8 @@
   font-family: 'Segoe UI', sans-serif;
   padding: 0px;
   background-color: #fdfdfd;
+  width: 99.4vw;
+  margin-left: calc(-1 * (100vw - 100%) / 2);
 } 
  
 .section-intro,
@@ -16,6 +18,7 @@ box-sizing: border-box;
 
 .section-services {
 background-color: #eaffea; 
+
 }
 
 .section-problems {
@@ -83,17 +86,20 @@ background-color:  #c8ffc5;
   /* Section 3 */
 .section-services {
   margin-bottom: 50px;
+  background-color: white;
 }
 
+
 .section-services h2 {
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .service-item {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .service-item.reverse {
@@ -102,31 +108,55 @@ background-color:  #c8ffc5;
 
 .service-image-left,
 .service-image-right {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  margin: 0 20px;
+  width: 220px;
+  height: 220px;
+  /* object-fit: contain; */
+  margin: 0 25px 15px 0;
+  border-radius: 50%; 
 }
 
+.service-image-left{
+  float: left;
+}
+
+.service-image-right {
+float: right;
+}
+
+
 .service-info h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 5px;
+  color : #245539;
+
 }
 
 .service-desc {
-  font-size: 15px;
+  font-size: 20px;
   color: #777;
+  padding-top:0;
+  font-weight: 500;
   line-height: 1.5;
+}
+
+.chatbot-link{
+  font-size: 22px;
+}
+
+.section-services{
+  margin-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 /* Feedback Form */
 .feedback-form  {
-  padding-top: 0;
+  padding-top: 10px;
   padding-bottom: 20px; 
   width: 100%;
   margin-left: 0;
   margin-right: 0; 
-  
+  background-color: #c8ffc5;;
+  margin-top: 10px;
 }
 
 .feedbackDiv{
@@ -135,7 +165,7 @@ background-color:  #c8ffc5;
   max-width: 50%;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  background-color:#c8ffc5;
+  background-color:white ;
   padding: 30px;
 }
 

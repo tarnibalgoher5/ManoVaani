@@ -2,6 +2,10 @@ import React from 'react';
 import './MainMenu.css';
 import { Link } from 'react-router-dom'; // Import Link for routing
 import logo from '../../assets/logo.png';
+import Journal from '../../assets/Journal.png';
+import ChatLogo2 from '../../assets/ChatLogo2.png';
+import ChatLogo from '../../assets/ChatLogo.png';
+import Survey2 from '../../assets/Survey2.png';
 
 function MainMenu() {
   return (
@@ -42,14 +46,14 @@ function MainMenu() {
         <h2>Services Offered</h2>
 
         <div className="service-item">
-          <img src="/chatbot.png" alt="Chatbot" className="service-image-left" />
+          <img  src={ChatLogo2} alt="Chatbot" className="service-image-left" />
           <div className="service-info">
-          <h3>
+          <h3 className='serviceText'>
             <a href="https://manovaani-chatbot.streamlit.app/" 
               className="chatbot-link"
               target="_blank" 
             >
-            Mental Health Chatbot
+            Mental Health Chatbot 
             </a>
             </h3>
             <p className="service-desc">
@@ -59,7 +63,7 @@ function MainMenu() {
         </div>
 
         <div className="service-item reverse">
-          <div className="service-info">
+          <div className="service-info"> 
             <Link to="/journal" className="service-link">
               <h3>Journal Your Feelings</h3>
             </Link>
@@ -67,18 +71,18 @@ function MainMenu() {
               Write, reflect, and track your emotional journey securely and privately.
             </p>
           </div>
-          <img src="/journal.png" alt="Journal" className="service-image-right" />
+          <img src={Journal} alt="Journal" className="service-image-right" />
         </div>
 
         <div className="service-item">
-          <img src="/survey.png" alt="Surveys" className="service-image-left" />
+          <img src={Survey2} alt="Surveys" className="service-image-left" />
           <div className="service-info">
             <Link to="/surveys" className="service-link">
-              <h3>Surveys</h3>
+              <h3>Surveys</h3> 
             </Link>
             <p className="service-desc">
               Engage with surveys that help you reflect and also contribute to better wellness research.
-            </p>
+            </p> 
           </div> 
         </div>
       </div>
@@ -95,7 +99,7 @@ function MainMenu() {
           <textarea placeholder="Your Message" required></textarea>
           <button type="submit">Send</button>
         </form>
-        </div>
+        </div> 
 
       </div> 
     </div>
