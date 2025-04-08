@@ -1,0 +1,63 @@
+.resources-container {
+    padding: 40px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .resources-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .resource-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+  }
+  
+  .resource-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .resource-card h2 {
+    font-size: 22px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+  }
+  
+  .resource-card p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .resource-card button {
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .resource-card button:hover {
+    background-color: #005bb5;
+  }
+  
