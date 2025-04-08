@@ -1,180 +1,186 @@
 .mainmenu-container {
-    font-family: 'Segoe UI', sans-serif;
-    padding: 0px;
-    background-color: #fdfdfd;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 0px;
+  background-color: #fdfdfd;
 } 
-   
+ 
 .section-intro,
 .section-problems,
 .section-services,
 .feedback-form {
-  width:100%; /* or any max width you prefer */
-  margin: 0 auto;
-  padding: 50px 5%;
-  box-sizing: border-box;
+width:100%; /* or any max width you prefer */
+margin: 0 auto;
+padding: 50px 5%;
+box-sizing: border-box;
 }
 
-.section-intro,
 .section-services {
-  background-color: #eaffea; 
+background-color: #eaffea; 
 }
 
 .section-problems {
-  background-color:  #c8ffc5;
+background-color:  #c8ffc5;
 } 
 
 
-  /* Section 1 */
-  .section-intro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-  }
-  
-  .intro-text {
-    max-width: 60%;
-  }
-  
-  .site-title {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .site-description {
-    font-size: 16px;
-    color: #777;
-    line-height: 1.6;
-  }
-  
-  .intro-image img {
-    height: 180px;
-    object-fit: contain;
-  }
-  
-  /* Section 2 */
-  .section-problems {
-    margin-bottom: 50px;
-  }
-  
-  .section-problems h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-  
-  .section-problems ul {
-    padding-left: 20px;
-    color: #444;
-    line-height: 1.6;
-  }
-  
-  /* Section 3 */
-  .section-services {
-    margin-bottom: 50px;
-  }
-  
-  .section-services h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  
-  .service-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-  
-  .service-item.reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .service-image-left,
-  .service-image-right {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    margin: 0 20px;
-  }
-  
-  .service-info h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-  
-  .service-desc {
-    font-size: 15px;
-    color: #777;
-    line-height: 1.5;
-  }
-  
-  /* Feedback Form */
-  .feedback-form  {
-    padding-top: 0;
-    padding-bottom: 20px; 
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0; 
-    
-  }
-  
-  .feedbackDiv{
-    margin: 10px auto 30px auto;
-    width: 100%;
-    max-width: 50%;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    background-color:#c8ffc5;
-    padding: 30px;
-  }
+/* Section 1 */
+.section-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
 
-  .feedback-form h1 {
-    font-size: 30px;
-    text-align: center;
-    padding:20px 0 0 0 ;
-    /* margin:20px 0; */
-  }
+.site-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.site-description {
+  font-size: 24px;
+  font-weight: bolder;
+  color: #f6907d;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 0;
+  margin:0;
+}
+
+.site-desc2{
+  font-size: 18px;
+  color: grey;
+
+  padding: 0;
+  margin : 0;
+}
+
+
+.intro-image img {
+  height: 180px;
+  object-fit: contain;
+}
+
+/* Section 2 */
+
+.section-problems h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.about-div > p{
+  text-align: justify;
+  color: black;
+  padding: 7px 14px;
+  font-size: 22px;
+}
+
+  /* Section 3 */
+.section-services {
+  margin-bottom: 50px;
+}
+
+.section-services h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.service-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-image-left,
+.service-image-right {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin: 0 20px;
+}
+
+.service-info h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* Feedback Form */
+.feedback-form  {
+  padding-top: 0;
+  padding-bottom: 20px; 
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0; 
   
-  .feedbackDiv form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .feedbackDiv input,
-  .feedbackDiv textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  .feedbackDiv textarea {
-    resize: vertical;
-    height: 100px;
-  }
-  
-  .feedbackDiv button {
-    background-color: #777;
-    color: white;
-    padding: 10px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .feedbackDiv button:hover {
-    background-color:#f6907d;
-  }
-  
-  .service-link {
-    text-decoration: none;
-    color: #1e90ff;
-    transition: color 0.3s;
-  }
-  
-  .service-link:hover {
-    color: #0056b3;
-  }
-  
+}
+
+.feedbackDiv{
+  margin: 10px auto 30px auto;
+  width: 100%;
+  max-width: 50%;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background-color:#c8ffc5;
+  padding: 30px;
+}
+
+.feedback-form h1 {
+  font-size: 30px;
+  text-align: center;
+  padding:20px 0 0 0 ;
+  /* margin:20px 0; */
+}
+
+.feedbackDiv form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedbackDiv input,
+.feedbackDiv textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.feedbackDiv textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.feedbackDiv button {
+  background-color: #777;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedbackDiv button:hover {
+  background-color:#f6907d;
+}
+
+.service-link {
+  text-decoration: none;
+  color: #1e90ff;
+  transition: color 0.3s;
+}
+
+.service-link:hover {
+  color: #0056b3;
+}

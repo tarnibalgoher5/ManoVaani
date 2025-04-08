@@ -9,11 +9,9 @@ function MainMenu() {
       {/* Section 1: Website Title and Intro */}
       <div className="section-intro">
         <div className="intro-text">
-          <h1 className="site-title">manovaani</h1>
-          <p className="site-description">
-            manovaani is your digital companion for emotional wellness.  
-            Access support, track your mood, and gain insights to improve mental well-being.
-          </p> 
+          {/* <h1 className="site-title">manovaani</h1>  */}
+          <p className="site-description">your safe haven powered with AI-driven care </p> 
+          <p className='site-desc2'> manovaani is your digital companion for emotional wellness</p>
         </div>
         <div className="intro-image">
           <img src="/intro-image.png" alt="Mental Health" />
@@ -22,13 +20,20 @@ function MainMenu() {
 
       {/* Section 2: Problems Faced */}
       <div className="section-problems">
-        <h2>Problems We Address</h2>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Nullam in est vitae arcu suscipit tincidunt.</li>
-          <li>Sed ac risus ac nulla vehicula scelerisque.</li>
-          <li>Praesent volutpat orci at metus eleifend, nec congue eros bibendum.</li>
-        </ul>
+        <h2>About</h2>
+        <div className='about-div'>
+          <p>
+          ManoVaani aims to use technologies like AI and NLP to bridge gaps in
+ mental health care services. It strives to create a safe space for people with
+ mental health struggles and their caregivers to seek immediate help. The 
+ application complements traditional services by providing a centralised
+ platform for quick access to various resources and informational content. It
+ leverages the power of Generative AI to create a conversational chatbot
+ that helps users ease their mental load while ensuring they feel heard and
+ validated while simultaneously offers advice and support.
+          </p>  
+        </div> 
+        
       </div>
 
       {/* Section 3: Services Offered */}
