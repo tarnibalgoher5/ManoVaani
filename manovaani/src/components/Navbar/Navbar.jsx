@@ -33,7 +33,7 @@ function Navbar() {
             document.head.removeChild(link);
         };
     }, []);
-
+// fix links 
     return (
         <div id="navbar">
             <div className="Navbar-content-div">
@@ -44,7 +44,7 @@ function Navbar() {
                 </div>
                 <nav id="nav-bar" className={click ? "active" : ""}>
                     <a href="#about" className="nav-link" onClick={homehandle}>About</a> 
-                    <a href="#connect" className="nav-link" onClick={homehandle}>Resources</a>
+                    <a href="#connect" className="nav-link" onClick={homehandle}>Resources</a> 
                     <a href="#contact" className="nav-link" onClick={homehandle}>Survey</a>
                     <a href="#contact" className="nav-link" onClick={homehandle}>Journal</a>
                     <a href="#" className="nav-link" onClick={loginhandle}>Login</a>

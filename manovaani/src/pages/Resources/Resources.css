@@ -11,32 +11,27 @@
   }
   
   .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    justify-items: center;
-  }
-  
-  .resource-card {
-    background-color: #ffffff;
-    border-radius: 16px;
-    padding: 25px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s ease;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
-  
+  .resource-card {
+    width: 45%; 
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+
   .resource-card:hover {
     transform: translateY(-5px);
   }
   
   .resource-card h2 {
     font-size: 22px;
-    color: #1a1a1a;
+    color: balck;
     margin-bottom: 10px;
   }
   
