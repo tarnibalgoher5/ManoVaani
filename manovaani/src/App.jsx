@@ -7,7 +7,7 @@ import Resources from './pages/Resources/Resources';
 // import Signup from './pages/Signup/Signup';
 // import Userprofile from './components/Userprofile/Userprofile';
 // import UserprofileEdit from './components/Userprofile/UserprofileEdit';
-// import Survey from './pages/Survey/Survey';
+import Survey from './pages/Survey/Survey';
 import {BrowserRouter ,Routes,Route} from 'react-router-dom';
 
 function App() {
@@ -23,8 +23,8 @@ function App() {
       {/* <Route path="/journal" element={<Journal/>}  />
       <Route path="/chatbot" element={< Chatbot/>}  />
       <Route path="/userprofile" element={<Userprofile />}  />
-      <Route path="/userprofile" element={<UserprofileEdit />}  />
-      <Route path="/survey" element={<Survey />}  /> */} 
+      <Route path="/userprofile" element={<UserprofileEdit />}  />*/} 
+      <Route path="/survey" element={<Survey />}  /> 
      
     </Routes>
     </BrowserRouter>
