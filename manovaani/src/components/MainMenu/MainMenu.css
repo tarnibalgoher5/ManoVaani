@@ -35,13 +35,14 @@ background-color:  #c8ffc5;
 }
 
 .site-title {
-  font-size: 28px;
+  font-size: 34px;
   font-weight: bold;
   margin: 0 0 10px 0;
+  color:#245539; 
 }
 
 .site-description {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bolder;
   color: #f6907d;
   line-height: 1.6;
@@ -52,11 +53,11 @@ background-color:  #c8ffc5;
 
 .intro-image{
   width: 30%;
-  height:20%
+  height:30%
 }
 
 .site-desc2{
-  font-size: 18px;
+  font-size: 20px;
   color: grey;
   padding: 0;
   margin : 0;
