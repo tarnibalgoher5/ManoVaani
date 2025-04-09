@@ -1,5 +1,24 @@
 #navbar{
     background-color:#c8ffc5;
     padding: 25px 25px;
+    font-family: 'Segoe UI', sans-serif;
 }
 
+#nav-bar{
+    text-align: right;
+
+}
+
+.nav-link{
+    padding:5px 5px;
+    font-size: 22px;
+    transition: all 0.3s ease;
+    text-decoration: none;  
+}
+
+.nav-link:hover{
+    font-size: 26px;
+    color: #245539;          
+    font-weight: bold;
+    text-decoration: none;  
+}

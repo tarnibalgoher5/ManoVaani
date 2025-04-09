@@ -54,10 +54,10 @@ background-color:  #c8ffc5;
   width: 30%;
   height:20%
 }
+
 .site-desc2{
   font-size: 18px;
   color: grey;
-
   padding: 0;
   margin : 0;
 }
@@ -74,6 +74,22 @@ background-color:  #c8ffc5;
   font-size: 30px;
   margin-bottom: 15px;
   text-align: center;
+}
+
+.service-info h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color : #245539;
+  text-decoration: none;  
+  transition: all 0.3s ease;
+}
+
+.service-info h3:hover{
+  font-size: 28px;
+}
+
+.serviceText > a{
+  text-decoration: none;
 }
 
 .about-div > p{
@@ -124,12 +140,6 @@ float: right;
 }
 
 
-.service-info h3 {
-  font-size: 24px;
-  margin-bottom: 5px;
-  color : #245539;
-
-}
 
 .service-desc {
   font-size: 20px;
