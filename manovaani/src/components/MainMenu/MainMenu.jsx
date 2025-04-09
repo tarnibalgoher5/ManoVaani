@@ -24,7 +24,7 @@ function MainMenu() {
       </div>
 
       {/* Section 2: Problems Faced */}
-      <div className="section-problems">
+      <div className="section-problems" id="about">
         <h2>About</h2>
         <div className='about-div'>
           <p>
@@ -42,7 +42,7 @@ function MainMenu() {
       </div>
 
       {/* Section 3: Services Offered */}
-      <div className="section-services">
+      <div className="section-services" id="services">
         <h2>Services Offered</h2>
 
         <div className="service-item">
@@ -59,7 +59,7 @@ function MainMenu() {
             <p className="service-desc">
               An intelligent conversational bot to guide you through tough times, answer your questions, and offer comfort.
             </p>
-          </div>
+          </div> 
         </div>
 
         <div className="service-item reverse">
