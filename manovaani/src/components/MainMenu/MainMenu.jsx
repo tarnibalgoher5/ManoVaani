@@ -1,7 +1,7 @@
 import React from 'react';
 import './MainMenu.css';
 import { Link } from 'react-router-dom'; // Import Link for routing
-import logo from '../../assets/logo.png';
+import HomeImg from '../../assets/HomeImg.png';
 import Journal from '../../assets/Journal.png';
 import ChatLogo2 from '../../assets/ChatLogo2.png';
 import ChatLogo from '../../assets/ChatLogo.png';
@@ -14,18 +14,18 @@ function MainMenu() {
       {/* Section 1: Website Title and Intro */}
       <div className="section-intro">
         <div className="intro-text">
-          <p className='site-title'>manovaani</p>
+          <p className='site-title'>Chat,Journal,Take surveys</p>
           <p className="site-description">your safe haven powered with AI-driven care </p> 
           <p className='site-desc2'> manovaani is your digital companion for emotional wellness</p>
         </div>
         <div className="intro-image">
-          <img src={logo} alt="Mental Health" />
+          <img src={HomeImg} alt="Mental Health" />
         </div>
       </div>
 
       {/* Section 2: Problems Faced */}
-      <div className="section-problems">
-        <h2>About</h2>
+      <div className="section-problems" id="about">
+        <h2>About</h2> 
         <div className='about-div'>
           <p>
           ManoVaani aims to use technologies like AI and NLP to bridge gaps in
@@ -42,7 +42,7 @@ function MainMenu() {
       </div>
 
       {/* Section 3: Services Offered */}
-      <div className="section-services">
+      <div className="section-services" id="services">
         <h2>Services Offered</h2>
 
         <div className="service-item">
@@ -59,7 +59,7 @@ function MainMenu() {
             <p className="service-desc">
               An intelligent conversational bot to guide you through tough times, answer your questions, and offer comfort.
             </p>
-          </div>
+          </div> 
         </div>
 
         <div className="service-item reverse">

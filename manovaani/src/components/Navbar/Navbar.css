@@ -1,5 +1,48 @@
 #navbar{
     background-color:#c8ffc5;
     padding: 25px 25px;
+    font-family: 'Segoe UI', sans-serif;
 }
 
+.Navbar-content-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+#nav-bar{
+    text-align: right;
+}
+
+.nav-link{
+    padding:7px 7px;
+    font-size: 22px;
+    transition: all 0.3s ease;
+    text-decoration: none;  
+    color: #245539; 
+}
+
+.nav-link:hover{
+    font-size: 26px;
+            
+    font-weight: bold;
+    text-decoration: none;  
+}
+
+.login-link{
+    margin-right: 7px;
+}
+
+.nav-name{
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 28px;
+    padding:7px 7px;
+    color: #245539; 
+    font-weight: bold;
+}
+
+.nav-name:hover{
+    font-size: 32px;
+}

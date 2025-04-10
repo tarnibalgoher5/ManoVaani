@@ -1,17 +1,17 @@
 import Dashboard from './pages/Dashboard/Dashboard';
-// import Aboutus from './pages/Aboutus/Aboutus';
+// import Aboutus from './pages/Aboutus/Aboutus'; 
 // import Chatbot from './pages/Chatbot/Chatbot';
 // import Journal from './pages/Journal/Journal';
 import Resources from './pages/Resources/Resources';
 // import Signin from './pages/Signin/Signin';
 // import Signup from './pages/Signup/Signup';
 // import Userprofile from './components/Userprofile/Userprofile';
-// import UserprofileEdit from './components/Userprofile/UserprofileEdit';
+// import UserprofileEdit from './components/Userprofile/UserprofileEdit'; 
 import Survey from './pages/Survey/Survey';
 import {BrowserRouter ,Routes,Route} from 'react-router-dom';
 
 function App() {
- 
+
 // toastify notifications to add * 
   return (  
     <BrowserRouter>

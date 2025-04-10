@@ -32,22 +32,20 @@ function Navbar() {
         return () => {
             document.head.removeChild(link);
         };
-    }, []);
+    }, []); 
 // fix links 
-    return (
+    return ( 
         <div id="navbar">
             <div className="Navbar-content-div">
-                {/* manovaani logo */}
-                <a href="#home-sec" onClick={homehandle}>       </a>
-                <div className="nav-icon" onClick={handleClick}>
-                    <i className={click ? "fa fa-times" : "fa fa-bars"}></i>
-                </div>
+                {/* manovaani logo */} 
+                <a href="#home-sec" className='nav-name' onClick={homehandle}>manovaani</a>
+                
                 <nav id="nav-bar" className={click ? "active" : ""}>
                     <a href="#about" className="nav-link" onClick={homehandle}>About</a> 
-                    <a href="#connect" className="nav-link" onClick={homehandle}>Resources</a> 
+                     <a href="#services" className="nav-link" onClick={homehandle}>Services</a> 
                     <a href="#contact" className="nav-link" onClick={homehandle}>Survey</a>
-                    <a href="#contact" className="nav-link" onClick={homehandle}>Journal</a>
-                    <a href="#" className="nav-link" onClick={loginhandle}>Login</a>
+                    {/* <a href="#contact" className="nav-link" onClick={homehandle}>Journal</a> */}
+                    <a href="#" className="nav-link login-lin" onClick={loginhandle}>Login</a>
                     {/* <a href="#" className="nav-link" onClick={signuphandle}>SignUp</a> */}
                 </nav>
             </div>
