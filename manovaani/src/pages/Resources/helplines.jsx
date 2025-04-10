@@ -286,19 +286,8 @@ function Helplines() {
         )}
       </section>
 
-      <div className="footer-container ft2">
-        <div className="footerText">
-          <h3>manovaani</h3>
-          <h6>your safe haven powered with AI driven care</h6>
-        </div>
-        <ul className="footer-nav">
-          <li onClick={() => window.location.href = '/aboutus'}>About Us</li>
-          <li onClick={() => window.location.href = '/surveys'}>Surveys</li>
-          <li onClick={() => window.location.href = '/resources'}>Resources</li>
-        </ul>
-      </div>
     </div>
-  
+    <Footer />
     </>
   );
 }

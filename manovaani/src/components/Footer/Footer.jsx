@@ -19,7 +19,7 @@ function Footer() {
                     className="footer-logo"
                     onClick={() => handleNavigation('/')}
                 />
-            <p className='footer-txt'>manovaani - your safe haven powered AI driven care</p>
+            <p className='footer-txt'><i>manovaani - your safe haven powered AI driven care</i></p>
                 <ul className="footer-nav">
                     <li className="footer-link" onClick={() => handleNavigation('/aboutus')}>About Us</li>
                     <li className="footer-link" onClick={() => handleNavigation('/surveys')}>Surveys</li>

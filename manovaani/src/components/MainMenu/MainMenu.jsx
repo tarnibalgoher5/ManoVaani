@@ -26,19 +26,20 @@ function MainMenu() {
       {/* Section 2: Problems Faced */}
       <div className="section-problems" id="about">
         <h2>About</h2> 
-        <div className='about-div'>
-          <p>
-          ManoVaani aims to use technologies like AI and NLP to bridge gaps in
- mental health care services. It strives to create a safe space for people with
- mental health struggles and their caregivers to seek immediate help. The 
- application complements traditional services by providing a centralised
- platform for quick access to various resources and informational content. It
- leverages the power of Generative AI to create a conversational chatbot
- that helps users ease their mental load while ensuring they feel heard and
- validated while simultaneously offers advice and support.
-          </p>  
+        <div className='about-div-container'>
+          <div className='about-div'>
+            <p>
+            ManoVaani aims to use technologies like AI and NLP to bridge gaps in
+   mental health care services. It strives to create a safe space for people with
+   mental health struggles and their caregivers to seek immediate help. The 
+   application complements traditional services by providing a centralised
+   platform for quick access to various resources and informational content. It
+   leverages the power of Generative AI to create a conversational chatbot
+   that helps users ease their mental load while ensuring they feel heard and
+   validated while simultaneously offers advice and support.
+            </p>  
+          </div>
         </div> 
-        
       </div>
 
       {/* Section 3: Services Offered */}
@@ -88,8 +89,6 @@ function MainMenu() {
       </div>
 
       {/* Feedback Form */}
-    
-
       <div className="feedback-form"> 
       <h1>Share your feedback with us</h1>
         <div className='feedbackDiv'>
@@ -100,7 +99,6 @@ function MainMenu() {
           <button type="submit">Send</button>
         </form>
         </div> 
-
       </div> 
     </div>
   );

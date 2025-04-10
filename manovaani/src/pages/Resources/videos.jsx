@@ -1,32 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './videos.css'; 
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 
 function Videos() {
   const [activeCategory, setActiveCategory] = useState('all');
+  const [thumbnailsLoaded, setThumbnailsLoaded] = useState({});
 
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
   };
 
-
   const videos = [
     {
       id: 1,
       title: "Understanding Anxiety and Depression",
-      channel: "NIMHANS Official",
-      thumbnail: "/api/placeholder/320/180",
-      videoId: "example1",
+      channel: "Therapy in a Nutshell",
+      videoId: "tEmt1Znux58",
       category: "educational",
-      description: "Experts from NIMHANS explain the science behind anxiety and depression."
+      description: "Anxiety is essentially a state of your nervous system. In this video we'll explore anxiety, trauma and burnout in your nervous system."
     },
     {
       id: 2,
       title: "Meditation for Mental Peace - 10 Minutes",
-      channel: "Indian Mindfulness",
-      thumbnail: "/api/placeholder/320/180",
-      videoId: "example2",
+      channel: "Goodful",
+      videoId: "O-6f5wQXSu8",
       category: "meditation",
       description: "A guided meditation practice specifically designed for stress relief."
     },
@@ -34,8 +32,7 @@ function Videos() {
       id: 3,
       title: "Breaking Mental Health Stigma in Indian Society",
       channel: "Mental Health Foundation India",
-      thumbnail: "/api/placeholder/320/180",
-      videoId: "example3",
+      videoId: "NiUu8mMZjEA",
       category: "awareness",
       description: "Discussion about overcoming stigma around mental health in Indian communities."
     },
@@ -43,8 +40,7 @@ function Videos() {
       id: 4,
       title: "Breathing Exercises for Stress Management",
       channel: "Yoga for Mental Health",
-      thumbnail: "/api/placeholder/320/180",
-      videoId: "example4",
+      videoId: "odADwWzHR24",
       category: "exercises",
       description: "Simple breathing techniques to reduce anxiety and manage stress."
     },
@@ -52,8 +48,7 @@ function Videos() {
       id: 5,
       title: "Understanding Schizophrenia: Symptoms and Treatment",
       channel: "AIIMS Mental Health",
-      thumbnail: "/api/placeholder/320/180",
-      videoId: "example5",
+      videoId: "K2sc_ck5BZU",
       category: "educational",
       description: "Medical professionals explain schizophrenia, its symptoms, and modern treatments."
     },
@@ -61,8 +56,7 @@ function Videos() {
       id: 6,
       title: "My Journey with Bipolar Disorder - A Personal Story",
       channel: "Mental Health Stories",
-      thumbnail: "/api/placeholder/320/180",
-      videoId: "example6",
+      videoId: "RrWBhVlD1H8",
       category: "testimonials",
       description: "A personal account of living with and managing bipolar disorder."
     }
@@ -72,6 +66,58 @@ function Videos() {
   const filteredVideos = activeCategory === 'all' 
     ? videos 
     : videos.filter(video => video.category === activeCategory);
+
+  // Function to get YouTube video URL
+  const getYouTubeUrl = (videoId) => {
+    return `https://www.youtube.com/watch?v=${videoId}`;
+  };
+  
+  // Try different thumbnail formats in order of preference
+  const thumbnailFormats = [
+    (videoId) => `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+    (videoId) => `https://img.youtube.com/vi/${videoId}/sddefault.jpg`,
+    (videoId) => `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+    (videoId) => `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`,
+    (videoId) => `https://img.youtube.com/vi/${videoId}/default.jpg`,
+    (videoId) => `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+  ];
+
+  // Check if image exists
+  const checkImage = (url) => {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+      img.src = url;
+    });
+  };
+
+  // This function tries to find a working thumbnail URL
+  const findWorkingThumbnail = async (videoId) => {
+    for (const formatFn of thumbnailFormats) {
+      const url = formatFn(videoId);
+      const exists = await checkImage(url);
+      if (exists) {
+        return url;
+      }
+    }
+    return "/api/placeholder/320/180"; // Fallback to placeholder
+  };
+
+  // Load thumbnails when component mounts or videos change
+  useEffect(() => {
+    const loadThumbnails = async () => {
+      const loadedThumbnails = {};
+      
+      for (const video of videos) {
+        loadedThumbnails[video.id] = await findWorkingThumbnail(video.videoId);
+      }
+      
+      setThumbnailsLoaded(loadedThumbnails);
+    };
+    
+    loadThumbnails();
+  }, []);
 
   return (
     <>
@@ -131,7 +177,11 @@ function Videos() {
         {filteredVideos.map(video => (
           <div className="video-card" key={video.id}>
             <div className="video-thumbnail">
-              <img src={video.thumbnail} alt={video.title} />
+              <img 
+                src={thumbnailsLoaded[video.id] || "/api/placeholder/320/180"} 
+                alt={video.title}
+                className="thumbnail-image"
+              />
               <div className="play-button">▶</div>
             </div>
             <div className="video-info">
@@ -139,7 +189,7 @@ function Videos() {
               <p className="channel">{video.channel}</p>
               <p className="description">{video.description}</p>
               <a 
-                href={`https://www.youtube.com/watch?v=${video.videoId}`} 
+                href={getYouTubeUrl(video.videoId)} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="watch-button"
