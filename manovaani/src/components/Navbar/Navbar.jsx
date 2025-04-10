@@ -22,7 +22,12 @@ function Navbar() {
         navigate('/');
         closeMobileMenu();
     }
- 
+    const surveyhandle = () => {
+        navigate('/survey');
+        closeMobileMenu();
+    };
+    
+
     useEffect(() => {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
@@ -43,7 +48,9 @@ function Navbar() {
                 <nav id="nav-bar" className={click ? "active" : ""}>
                     <a href="#about" className="nav-link" onClick={homehandle}>About</a> 
                      <a href="#services" className="nav-link" onClick={homehandle}>Services</a> 
-                    <a href="#contact" className="nav-link" onClick={homehandle}>Survey</a>
+                     <a href="#survey" className="nav-link" onClick={surveyhandle}>Survey</a>
+
+
                     {/* <a href="#contact" className="nav-link" onClick={homehandle}>Journal</a> */}
                     <a href="#" className="nav-link login-lin" onClick={loginhandle}>Login</a>
                     {/* <a href="#" className="nav-link" onClick={signuphandle}>SignUp</a> */}

@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import './Survey.css';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 function Survey(){
     const navigate = useNavigate();
 
   return (
-
+<>
+<Navbar />
     <div className="survey-container">
   <h1 className="survey-title">Mental Health Self-Assessments</h1>
 
@@ -74,8 +77,8 @@ function Survey(){
     </div>
   </div>
 </div>
-
-
+<Footer />
+</>
   );
 
 
