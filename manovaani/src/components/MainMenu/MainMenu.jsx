@@ -15,7 +15,7 @@ function MainMenu() {
       <div className="section-intro">
         <div className="intro-text">
           <p className='site-title'>Chat,Journal,Take surveys</p>
-          <p className="site-description">your safe haven powered with AI-driven care </p> 
+          <p className="site-description"><i>your safe haven powered with AI-driven care</i> </p> 
           <p className='site-desc2'> manovaani is your digital companion for emotional wellness</p>
         </div>
         <div className="intro-image">
