@@ -6,10 +6,6 @@ import logo from '../../assets/logo.png';
 function Footer() {
     const navigate = useNavigate(); 
 
-    const handleNavigation = (path) => {
-        navigate(path); 
-    };
-
     return (
         <div className="footer">
             <div className="footer-container">
@@ -17,15 +13,15 @@ function Footer() {
                     src={logo}
                     alt="Logo"
                     className="footer-logo"
-                    onClick={() => handleNavigation('/')}
+                    onClick={() => navigate('/')}
                 />
-            <p className='footer-txt'><i>manovaani - your safe haven powered AI driven care</i></p>
+                <p className='footer-txt'><i>manovaani - your safe haven powered AI driven care</i></p>
                 <ul className="footer-nav">
-                    <li className="footer-link" onClick={() => handleNavigation('/aboutus')}>About Us</li>
-                    <li className="footer-link" onClick={() => handleNavigation('/surveys')}>Surveys</li>
-                    <li className="footer-link" onClick={() => handleNavigation('/resources')}>Resources</li>
+                    <li className="footer-link" onClick={() => navigate('/')}>About Us</li>
+                    <li className="footer-link" onClick={() => navigate('/survey')}>Survey</li>
+                    <li className="footer-link" onClick={() => navigate('/resources')}>Resources</li>
                 </ul>
-                </div>
+            </div>
         </div> 
     ); 
 }

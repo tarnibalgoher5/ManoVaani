@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Navbar.css';
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
@@ -13,20 +12,23 @@ function Navbar() {
     const loginhandle = () => {
         navigate('/signin');
         closeMobileMenu();
-    }
+    };
     const signuphandle = () => {
         navigate('/signup');
         closeMobileMenu();
-    }
+    };
     const homehandle = () => {
         navigate('/');
         closeMobileMenu();
-    }
+    };
     const surveyhandle = () => {
         navigate('/survey');
         closeMobileMenu();
     };
-    
+    const resourceshandle = () => {
+        navigate('/resources');
+        closeMobileMenu();
+    };
 
     useEffect(() => {
         const link = document.createElement('link');
@@ -37,19 +39,19 @@ function Navbar() {
         return () => {
             document.head.removeChild(link);
         };
-    }, []); 
-// fix links 
-    return ( 
+    }, []);
+
+    return (
         <div id="navbar">
             <div className="Navbar-content-div">
-                {/* manovaani logo */} 
-                <a href="#home-sec" className='nav-name' onClick={homehandle}>manovaani</a>
-                
-                <nav id="nav-bar" className={click ? "active" : ""}>
-                    <a href="#about" className="nav-link" onClick={homehandle}>About</a> 
-                     <a href="#services" className="nav-link" onClick={homehandle}>Services</a> 
-                     <a href="#survey" className="nav-link" onClick={surveyhandle}>Survey</a>
+                {/* manovaani logo */}
+                <a href="#home-sec" className="nav-name" onClick={homehandle}>manovaani</a>
 
+                <nav id="nav-bar" className={click ? "active" : ""}>
+                    <a href="#about" className="nav-link" onClick={homehandle}>About</a>
+                    <a href="#services" className="nav-link" onClick={homehandle}>Services</a>
+                    <a href="#survey" className="nav-link" onClick={surveyhandle}>Survey</a>
+                    <a href="#resources" className="nav-link" onClick={resourceshandle}>Resources</a>
 
                     {/* <a href="#contact" className="nav-link" onClick={homehandle}>Journal</a> */}
                     <a href="#" className="nav-link login-lin" onClick={loginhandle}>Login</a>
@@ -57,7 +59,7 @@ function Navbar() {
                 </nav>
             </div>
         </div>
-    )
+    );
 }
 
 export default Navbar;

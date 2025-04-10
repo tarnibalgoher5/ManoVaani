@@ -12,7 +12,7 @@ function Resources() {
       <Navbar />
       <div className="resources-container">
         <div className="resources-header">
-          <h1 className="resources-title">Explore Resources</h1>
+          <h1 className="resources-title"><i>Explore Resources</i></h1>
           <p className="resources-subtitle">Discover tools and information to support your mental health journey</p>
         </div>
 
