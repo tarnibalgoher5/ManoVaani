@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './videos.css'; 
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 function Videos() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -72,6 +74,8 @@ function Videos() {
     : videos.filter(video => video.category === activeCategory);
 
   return (
+    <>
+    <Navbar />
     <div className="videos-container">
       <header className="videos-header">
         <h1>Mental Health Videos</h1>
@@ -152,18 +156,9 @@ function Videos() {
         <p>These videos are provided for educational and informational purposes only. They are not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
       </section>
 
-      <div className="footer-container ft2">
-        <div className="footerText">
-          <h3>manovaani</h3>
-          <h6>your safe haven powered with AI driven care</h6>
-        </div>
-        <ul className="footer-nav">
-          <li onClick={() => window.location.href = '/aboutus'}>About Us</li>
-          <li onClick={() => window.location.href = '/surveys'}>Surveys</li>
-          <li onClick={() => window.location.href = '/resources'}>Resources</li>
-        </ul>
-      </div>
     </div>
+    <Footer />
+    </>
   );
 }
 

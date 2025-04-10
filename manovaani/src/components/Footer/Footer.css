@@ -1,71 +1,80 @@
 .footer {
   background-color: #f6907d;
-    padding: 20px 40px;
-    border-top: 1px solid #ddd;
-    margin:auto 0 0 ;
+  padding: 20px 40px;
+  margin: auto 0 0;
   width: 99.38vw;
   margin-left: calc(-1 * (100vw - 100%) / 2);
   box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .footer-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .footer-logo {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .footer-logo:hover {
-    transform: scale(1.05);
-  }
-  
-  .footer-nav {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer-nav li {
-    cursor: pointer;
-    color: white;
-    font-weight: 500;
-    transition: color 0.3s;
-    font-size: 25px;
-  }
-  
-.footer-nav li:hover {
-    color: #245539;
-    font-weight: 400;
-}
-  
-.footerText{
-    display: inline;
-    justify-content: center;
-    justify-items: center;
-    margin-left: 30%;
+  border-top: none !important; /* Ensure there's no border */
+  box-shadow: none !important;  /* Ensure there's no shadow */
 }
 
-.footerText > h3{
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-txt {
+  font-size: 20px;
+  color: white;
+  padding-top: 25px;
+  margin-left: 0;
+  text-align: left;
+}
+
+.footer-logo {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size: 25px;
+}
+
+.footer-nav li:hover {
+  color: #245539;
+  font-weight: 400;
+}
+
+.footerText {
+  display: inline;
+  justify-content: center;
+  margin-left: 30%;
+}
+
+.footerText > h3 {
   font-size: 35px;
   color: white;
-
 }
 
-.footerText > h6{
-   font-size: 20px;
-   color: #245539; /**/
+.footerText > h6 {
+  font-size: 20px;
+  color: #245539;
 }
 
-.footerText > h3 ,   .footerText > h6{
-    padding: 0;
-    margin : 0 0 ;
-  }
-
+.footerText > h3, .footerText > h6 {
+  padding: 0;
+  margin: 0;
+}
+.footer-nav > .footer-link{
+  text-decoration-line: none;
+}

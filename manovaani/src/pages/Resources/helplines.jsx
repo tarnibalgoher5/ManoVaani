@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 import './helplines.css'; 
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
+import { useNavigate } from 'react-router-dom';
+
+
 function Helplines() {
   const [activeRegion, setActiveRegion] = useState('north');
 
   const handleRegionChange = (region) => {
     setActiveRegion(region);
-  };
+  }; 
 
-  return (
+  const navigate = useNavigate();
+
+  return ( <>
+  <Navbar />
     <div className="helplines-container">
       <header className="helplines-header">
         <h1>Mental Health Helplines</h1>
@@ -274,7 +282,7 @@ function Helplines() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
         )}
       </section>
 
@@ -290,6 +298,8 @@ function Helplines() {
         </ul>
       </div>
     </div>
+  
+    </>
   );
 }
 

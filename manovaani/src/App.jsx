@@ -2,8 +2,9 @@ import Dashboard from './pages/Dashboard/Dashboard';
 // import Aboutus from './pages/Aboutus/Aboutus'; 
 // import Chatbot from './pages/Chatbot/Chatbot';
 // import Journal from './pages/Journal/Journal';
-import Resources from './pages/Resources/Resources';
-import helplines from './pages/Resources/helplines';
+import Resources from './pages/Resources/Resources'; 
+import Helplines from './pages/Resources/Helplines';
+import Videos from './pages/Resources/Videos';
 // import Signin from './pages/Signin/Signin';
 // import Signup from './pages/Signup/Signup';
 // import Userprofile from './components/Userprofile/Userprofile';
@@ -25,6 +26,8 @@ function App() {
       <Route path="/chatbot" element={< Chatbot/>}  />
       <Route path="/userprofile" element={<Userprofile />}  />
       <Route path="/userprofile" element={<UserprofileEdit />}  />*/} 
+      <Route path="/resources/helplines" element={<Helplines />} />
+      <Route path="/resources/videos" element={<Videos />} />
       <Route path="/survey" element={<Survey />}  /> 
      
     </Routes>
