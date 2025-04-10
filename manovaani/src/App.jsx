@@ -3,6 +3,7 @@ import Dashboard from './pages/Dashboard/Dashboard';
 // import Chatbot from './pages/Chatbot/Chatbot';
 // import Journal from './pages/Journal/Journal';
 import Resources from './pages/Resources/Resources';
+import helplines from './pages/Resources/helplines';
 // import Signin from './pages/Signin/Signin';
 // import Signup from './pages/Signup/Signup';
 // import Userprofile from './components/Userprofile/Userprofile';
