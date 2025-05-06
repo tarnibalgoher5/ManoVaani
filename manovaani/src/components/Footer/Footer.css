@@ -6,7 +6,7 @@
   width: 99.38vw;
   margin-left: calc(-1 * (100vw - 100%) / 2);
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Poppins", sans-serif;
   border-top: none !important; /* Ensure there's no border /
   box-shadow: none !important;  / Ensure there's no shadow */
 }
