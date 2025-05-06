@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 import './UserProfileEdit.css';
-import Navbar from '../Navbar/Navbar'; import { useNavigate } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar'; 
+import Footer from '../Footer/Footer';
+import { useNavigate } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import { auth } from '../../services/firebase'; // adjust path as needed
 
 function UserProfileEdit() {
   const navigate = useNavigate();
 
-  // Initial user data
   const [user, setUser] = useState({
     name: '',
     email: '',
@@ -14,12 +17,10 @@ function UserProfileEdit() {
 
   const [errors, setErrors] = useState({});
 
-  // Handle input change
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  // Validate and save changes
   const handleSave = () => {
     let validationErrors = {};
     if (!user.name.trim()) {
@@ -30,7 +31,16 @@ function UserProfileEdit() {
       setErrors(validationErrors);
     } else {
       console.log('User Updated:', user);
-      navigate('/profile'); // Redirect back to profile after saving
+      navigate('/profile');
+    }
+  };
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate('/signin');
+    } catch (error) {
+      console.error("Logout failed:", error.message);
     }
   };
 
@@ -76,8 +86,10 @@ function UserProfileEdit() {
         <div className="button-group">
           <button onClick={handleSave} className="save-btn">Save</button>
           <button onClick={() => navigate('/profile')} className="cancel-btn">Cancel</button>
+          <button onClick={handleLogout} className="logout-btn">Logout</button>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

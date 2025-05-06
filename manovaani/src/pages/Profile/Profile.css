@@ -1,0 +1,83 @@
+.profile-component-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  text-align: center;
+  background: white;
+}
+
+.profile-component-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-component-error {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.profile-component-field {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.profile-component-label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.profile-component-text {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.profile-component-input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.profile-component-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.profile-component-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  min-width: 100px;
+  transition: background-color 0.3s ease;
+}
+
+.profile-component-button.primary {
+  background-color: #764ba2;
+  color: white;
+}
+
+.profile-component-button.primary:hover:enabled {
+  background-color: #5a32a3;
+}
+
+.profile-component-button.secondary {
+  background-color: #ccc;
+  color: #333;
+}
+
+.profile-component-button.secondary:hover {
+  background-color: #aaa;
+}
+
+.profile-component-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

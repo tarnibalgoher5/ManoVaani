@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './UserProfile.css';
-import Navbar from '../Navbar/Navbar'; // Import Navbar component
-// import defaultAvatar from '/default-avatar.png'; // Replace with actual avatar path
+import Navbar from '../Navbar/Navbar'; 
+import Footer from '../Footer/Footer';
+import { useNavigate } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase'; // update path if needed
 
 function UserProfile() {
   const [editMode, setEditMode] = useState(false);
@@ -11,6 +14,8 @@ function UserProfile() {
     phone: '',
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
@@ -19,9 +24,13 @@ function UserProfile() {
     setEditMode(!editMode);
   };
 
-  const handleLogout = () => {
-    // Implement logout logic
-    console.log('Logging out...');
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate('/signin');
+    } catch (error) {
+      console.error('Logout failed:', error.message);
+    }
   };
 
   return (
@@ -31,9 +40,6 @@ function UserProfile() {
       <div className="profile-container">
         {!editMode ? (
           <div className="profile-view">
-            <img src={defaultAvatar} alt="User Avatar" className="user-avatar" />
-            <h2>{user.name}</h2>
-
             <div className="info-row">
               <label>Email:</label>
               <span>{user.email}</span>
@@ -46,12 +52,11 @@ function UserProfile() {
 
             <div className="button-group">
               <button onClick={toggleEditMode} className="edit-btn">Edit</button>
-              <button onClick={handleLogout} className="logout-btn">Logout</button>
             </div>
           </div>
         ) : (
           <div className="profile-edit">
-            <img src={defaultAvatar} alt="User Avatar" className="user-avatar" />
+            {/* <img src={defaultAvatar} alt="User Avatar" className="user-avatar" /> */}
             <h2>Edit Profile</h2>
 
             <div className="info-row">
@@ -75,7 +80,14 @@ function UserProfile() {
             </div>
           </div>
         )}
+
+        {/* Logout button at the bottom */}
+        <div className="logout-wrapper">
+          <button onClick={handleLogout} className="logout-btn">Logout</button>
+        </div>
       </div>
+
+      <Footer />
     </>
   );
 }
