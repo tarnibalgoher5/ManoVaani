@@ -10,6 +10,7 @@ import survey from '../../assets/survey.png';
 import img from '../../assets/img.png';
 import diary from '../../assets/diary.png';
 import mainmenu from '../../assets/mainmenu.png';
+import collage from '../../assets/collage.png';
 
 function MainMenu() {
   return (
@@ -23,10 +24,11 @@ function MainMenu() {
           <p className='site-desc2'> manovaani - digital companion for emotional wellness</p>
         </div> 
         <div className="intro-image">
-          <img src={mainmenu} alt="Mental Health" />
+          <img src={collage} alt="Mental Health" />
           {/* <img src={survey} id="img2"></img> */}
         {/* <img src={diary}  id="img3" alt="" /> */}
-        </div>
+        </div> 
+        {/* <div><button></button></div> */}
       </div>
 
       {/* Section 2: Problems Faced */}
