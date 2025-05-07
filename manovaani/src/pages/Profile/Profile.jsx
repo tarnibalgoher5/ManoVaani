@@ -4,6 +4,7 @@ import { updateProfile, updateEmail } from "firebase/auth";
 import { ref, set } from "firebase/database";
 import './Profile.css';
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 const Profile = ({ userData }) => {
   const [editing, setEditing] = useState(false);
@@ -51,9 +52,11 @@ const Profile = ({ userData }) => {
   };
 
   return (
+    <div> 
+       <Navbar /> 
     <div className="profile-component-container">
-      {/* <Navbar /> */}
-      <h2 className="profile-component-title">Your Profile</h2>
+     
+      <h2 className="profile-component-title">Your ManoVaani Profile</h2>
       {error && <p className="profile-component-error">{error}</p>}
 
       <div className="profile-component-field">
@@ -110,6 +113,8 @@ const Profile = ({ userData }) => {
           </button>
         )}
       </div>
+    </div>
+    <Footer />
     </div>
   );
 };

@@ -9,6 +9,7 @@ import Survey2 from '../../assets/Survey2.png';
 import survey from '../../assets/survey.png';
 import img from '../../assets/img.png';
 import diary from '../../assets/diary.png';
+import mainmenu from '../../assets/mainmenu.png';
 
 function MainMenu() {
   return (
@@ -22,7 +23,9 @@ function MainMenu() {
           <p className='site-desc2'> manovaani - digital companion for emotional wellness</p>
         </div> 
         <div className="intro-image">
-          <img src={HomeImg} alt="Mental Health" />
+          <img src={mainmenu} alt="Mental Health" />
+          {/* <img src={survey} id="img2"></img> */}
+        {/* <img src={diary}  id="img3" alt="" /> */}
         </div>
       </div>
 

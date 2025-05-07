@@ -1,7 +1,7 @@
 .container {
     font-family: "Poppins", sans-serif;
     background: linear-gradient(135deg, c);
-    color: #333;
+    /* color: #333; */
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -9,6 +9,14 @@
     align-items: center;
   }
   
+#userform{
+  background-color: #245539;
+  padding: 40px 40px;
+  width: 50%;
+  border: 5px;
+  border-radius: 7px;
+}
+
   .app {
     width: 100%;
     max-width: 360px;
@@ -26,7 +34,7 @@
   
   h2 {
     margin-bottom: 1.5rem;
-    color: #5a32a3;
+    color: white;
     text-align: center;
   }
   
@@ -37,7 +45,7 @@
     gap: 1rem;
   }
   
-  input[type="email"],
+  input[type="email"], input[type="name"]
   input[type="password"] {
     padding: 0.75rem 1rem;
     border: 2px solid #ddd;
@@ -46,15 +54,15 @@
     transition: border-color 0.3s ease;
   }
   
-  input[type="email"]:focus,
+  input[type="email"]:focus,  input[type="name"]:focus 
   input[type="password"]:focus {
     outline: none;
-    border-color: #764ba2;
-    box-shadow: 0 0 8px #b494d4;
+    /* border-color: #764ba2; */
+    /* box-shadow: 0 0 8px #b494d4; */
   }
   
   button[type="submit"] {
-    background-color: #764ba2;
+    background-color: #a1c4a0;
     color: white;
     border: none;
     padding: 0.85rem 1rem;
@@ -65,7 +73,7 @@
   }
   
   button[type="submit"]:hover {
-    background-color: #5a32a3;
+    background-color: #a1c4a0;
   }
   
   .error {
@@ -84,7 +92,7 @@
   .link-button {
     background: none;
     border: none;
-    color: #764ba2;
+    color: #a1c4a0;
     cursor: pointer;
     font-weight: 600;
     text-decoration: underline;
@@ -93,7 +101,7 @@
   }
   
   .link-button:hover {
-    color: #5a32a3;
+    color: #a1c4a0;
   }
   
   /* Mobile responsiveness */

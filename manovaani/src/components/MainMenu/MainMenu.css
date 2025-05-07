@@ -83,8 +83,8 @@
 }
 
 .intro-image{
-  width: 30%;
-  height:30%
+  width: 35%;
+  height:35%;
 }
 
 .site-desc2{
@@ -97,9 +97,17 @@
 
 
 .intro-image img {
-  height: 180px;
+  /* height: 180px; */
+  width: 60%;
   object-fit: contain;
 }
+
+#img2 , #img3 {
+width : 30%;
+height: 30%;
+}
+
+
 
 /* Section 2 */
 

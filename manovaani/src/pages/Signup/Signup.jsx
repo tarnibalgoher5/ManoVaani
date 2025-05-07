@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { ref, set } from "firebase/database";
 import { useNavigate } from "react-router-dom";
 import './Signup.css';
+import Navbar from '../../components/Navbar/Navbar';
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -48,16 +49,18 @@ const SignUp = () => {
 
   return (
     <div className="container">
+      <Navbar />
+      
+      <form id="userform" onSubmit={handleSignUp} className="form">
       <h2>Create a new account</h2>
-      <form onSubmit={handleSignUp} className="form">
-        <input
+        {/* <input
           type="text"
           placeholder="Name"
           value={name}
           onChange={e => setName(e.target.value)}
           required
           autoComplete="name"
-        />
+        /> */}
         <input
           type="email"
           placeholder="Email"
