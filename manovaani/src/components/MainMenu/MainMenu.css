@@ -1,7 +1,7 @@
 .mainmenu-container {
   font-family: "Poppins", sans-serif;
   padding: 0px;
-  background-color: #fdfdfd;
+  /* background-color: #245539; */
   width: 99.4vw;
   margin-left: calc(-1 * (100vw - 100%) / 2);
 } 
@@ -21,7 +21,7 @@
 }
 
 .section-problems {
-  background-color: #c8ffc5;
+  background-color: white;
   padding-top: 40px;
   padding-bottom: 50px;
 } 
@@ -40,14 +40,14 @@
   background-color: white;
   border-radius: 15px;
   padding: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1); */
 }
 
 .about-div > p {
   text-align: justify;
   color: black;
   padding: 15px 25px;
-  font-size: 22px;
+  font-size: 25px;
   margin: 0;
 }
 
@@ -56,24 +56,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color:  #245539;
+  color:white;
+  margin:5px 5px 5px 5px;
 }
 
+
 .site-title {
-  font-size: 34px;
+  font-size: 48px;
   font-weight: bold;
-  margin: 0 0 10px 0;
-  color:#245539; 
+  margin: 0 0 0px 0;
+  color:white ; 
+  padding-left: 0;
+  text-align: left;
 }
 
 .site-description {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bolder;
-  color: #f6907d;
+  color: #a1c4a0;
   line-height: 1.6;
-  text-align: justify;
+  text-align: left;
   padding: 0;
-  margin:0;
+  margin:0 0 5px 0;
+  
 }
 
 .intro-image{
@@ -83,9 +89,10 @@
 
 .site-desc2{
   font-size: 20px;
-  color: grey;
-  padding: 0;
-  margin : 0;
+  color: #cbdbc3;
+  padding: 5px 5px ;
+  margin : 15px 0 0 0 ;
+  text-align: left;
 }
 
 
@@ -97,15 +104,16 @@
 /* Section 2 */
 
 .section-problems h2 {
-  font-size: 30px;
+  font-size: 34px;
   margin-bottom: 25px;
   text-align: center;
+  color:#245539;
 }
 
 .service-info h3 {
   font-size: 24px;
   margin-bottom: 5px;
-  color : #245539;
+  color : white;
   text-decoration: none;  
   transition: all 0.3s ease;
 }
@@ -116,12 +124,14 @@
 
 .serviceText > a{
   text-decoration: none;
+  color:white;
 }
 
 /* Section 3 */
 .section-services {
   margin-bottom: 50px;
-  background-color: white;
+  background-color:#245539;
+  color : white ;
 }
 
 
@@ -129,6 +139,7 @@
   font-size: 30px;
   margin-bottom: 20px;
   text-align: center;
+  color : white ;
 }
 
 .service-item {
@@ -160,7 +171,7 @@
 
 .service-desc {
   font-size: 20px;
-  color: #777;
+  color:#a1c4a0;
   padding-top:0;
   font-weight: 500;
   line-height: 1.5;
@@ -182,8 +193,9 @@
   width: 100%;
   margin-left: 0;
   margin-right: 0; 
-  background-color: #c8ffc5;;
+  background-color: white;
   margin-top: 10px;
+  color:#245539;
 }
 
 .feedbackDiv{
@@ -255,6 +267,6 @@
   
   .about-div > p {
     padding: 10px 15px;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
