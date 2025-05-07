@@ -229,13 +229,22 @@
   font-size: 14px;
 }
 
+#btn-send{
+  background-color:#a1c4a0;
+}
+
+#btn-send:hover{
+  background-color: #245539;
+}
+
+
 .feedbackDiv textarea {
   resize: vertical;
   height: 100px;
 }
 
 .feedbackDiv button {
-  background-color: #777;
+  background-color: #245539;
   color: white;
   padding: 10px;
   font-weight: bold;

@@ -96,7 +96,7 @@ function MainMenu() {
           <input type="text" placeholder="Your Name" required />
           <input type="email" placeholder="Your Email" required />
           <textarea placeholder="Your Message" required></textarea>
-          <button type="submit">Send</button>
+          <button type="submit" id="btn-send">Send</button>
         </form>
         </div> 
       </div> 
