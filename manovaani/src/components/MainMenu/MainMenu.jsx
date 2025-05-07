@@ -6,6 +6,9 @@ import Journal from '../../assets/Journal.png';
 import ChatLogo2 from '../../assets/ChatLogo2.png';
 import ChatLogo from '../../assets/ChatLogo.png';
 import Survey2 from '../../assets/Survey2.png';
+import survey from '../../assets/survey.png';
+import img from '../../assets/img.png';
+import diary from '../../assets/diary.png';
 
 function MainMenu() {
   return (
@@ -47,7 +50,7 @@ function MainMenu() {
         <h2>Services Offered</h2>
 
         <div className="service-item">
-          <img  src={ChatLogo2} alt="Chatbot" className="service-image-left" />
+          <img  src={img} alt="Chatbot" className="service-image-left" />
           <div className="service-info">
           <h3 className='serviceText'>
             <a href="https://manovaani-chatbot.streamlit.app/" 
@@ -72,13 +75,13 @@ function MainMenu() {
               Write, reflect, and track your emotional journey securely and privately.
             </p>
           </div>
-          <img src={Journal} alt="Journal" className="service-image-right" />
+          <img src={diary} alt="Journal" className="service-image-right" />
         </div>
 
         <div className="service-item">
-          <img src={Survey2} alt="Surveys" className="service-image-left" />
+          <img src={survey} alt="Surveys" className="service-image-left" />
           <div className="service-info">
-            <Link to="/surveys" className="service-link">
+            <Link to="/survey" className="service-link">
               <h3>Surveys</h3> 
             </Link>
             <p className="service-desc">
