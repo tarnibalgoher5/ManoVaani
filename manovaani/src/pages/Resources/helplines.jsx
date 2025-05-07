@@ -139,7 +139,7 @@ function Helplines() {
         </div>
       </section>
 
-      <section className="region-helplines">
+      {/* <section className="region-helplines">
         <h2>State-Specific Helplines</h2>
         
         <div className="region-tabs">
@@ -284,7 +284,7 @@ function Helplines() {
             </div>
           </div> 
         )}
-      </section>
+      </section> */}
 
     </div>
     <Footer />
