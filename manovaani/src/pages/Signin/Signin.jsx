@@ -1,16 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { auth, database } from "../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { ref, get } from "firebase/database";
 import { useNavigate } from "react-router-dom";
 import './Signin.css';
+import Navbar from '../../components/Navbar/Navbar';
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [sessionUser, setSessionUser] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedUser = sessionStorage.getItem("userData");
+    if (storedUser) {
+      setSessionUser(JSON.parse(storedUser));
+    }
+  }, []);
 
   const handleSignIn = async (e) => {
     e.preventDefault();
@@ -24,14 +33,15 @@ const SignIn = () => {
       // Fetch user profile from Realtime Database
       const userRef = ref(database, 'users/' + user.uid);
       const snapshot = await get(userRef);
+      let userData = { email: user.email };
+
       if (snapshot.exists()) {
-        const userData = snapshot.val();
-        // Store user data in sessionStorage
-        sessionStorage.setItem("userData", JSON.stringify(userData));
-      } else {
-        console.warn("No user data found in database!");
-        sessionStorage.setItem("userData", JSON.stringify({ email: user.email }));
+        userData = snapshot.val();
       }
+
+      // Store user data in sessionStorage
+      sessionStorage.setItem("userData", JSON.stringify(userData));
+      setSessionUser(userData);
 
       setEmail("");
       setPassword("");
@@ -44,39 +54,47 @@ const SignIn = () => {
   };
 
   return (
-    <div className="container">
-      <h2>Sign into your account</h2>
-      <form onSubmit={handleSignIn} className="form">
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          required
-          autoComplete="username"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          required
-          autoComplete="current-password"
-        />
-        <button type="submit" disabled={loading}>{loading ? "Signing in..." : "Sign In"}</button>
-      </form>
-      {error && <p className="error">{error}</p>}
-      <p>
-        New user?{" "}
-        <button className="link-button" onClick={() => navigate("/signup")}>
-          Create Account
-        </button>
-      </p>
+    <div>
+      <Navbar user={sessionUser} />
+      <div className="container">
+        <div className="form-wrapper">
+          <h2>Sign into your account</h2>
+          <form onSubmit={handleSignIn} className="form">
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required
+              autoComplete="username"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              required
+              autoComplete="current-password"
+            />
+            <button type="submit" disabled={loading}>
+              {loading ? "Signing in..." : "Sign In"}
+            </button>
+            {error && <p className="error">{error}</p>}
+          </form>
+          <p>
+            New user?
+            <button className="link-button" onClick={() => navigate("/signup")}>
+              Create Account
+            </button>
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default SignIn;
+
 
 
 

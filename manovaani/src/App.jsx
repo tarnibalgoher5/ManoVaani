@@ -39,10 +39,10 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/journal" element={<Journal />} />
-        <Route 
+        {/* <Route 
           path="/profile" 
           element={user ? <Profile userData={user} /> : <Navigate to="/signin" replace />} 
-        />
+        /> */}
         {/* <Route 
           path="/userprofile" 
           element={user ? <User profileEdit /> : <Navigate to="/signin" replace />} 
@@ -58,6 +58,11 @@ function App() {
           path="/signin" 
           element={!user ? <SignIn /> : <Navigate to="/profile" replace />} 
         />
+        <Route 
+  path="/profile" 
+  element={user ? <Profile userData={user} /> : <Navigate to="/signin" replace />} 
+/>
+
       </Routes>
       <ToastContainer />
     </BrowserRouter>

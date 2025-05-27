@@ -12,7 +12,7 @@ function Resources() {
       <Navbar />
       <div className="resources-container">
         <div className="resources-header">
-          <h1 className="resources-title"><i>Explore Resources</i></h1>
+          <h1 className="resources-title">Explore Resources</h1>
           <p className="resources-subtitle">Discover tools and information to support your mental health journey</p>
         </div>
 
@@ -42,7 +42,7 @@ function Resources() {
             <button onClick={() => navigate('/resources/videos')}>Watch Videos</button>
           </div>
 
-          {/* Card 3 */}
+          {/* Card 3
           <div className="resource-card">
             <div className="icon-circle">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -52,10 +52,10 @@ function Resources() {
             <h2>Educational Materials</h2>
             <p>Access educational resources to better understand mental health conditions and treatment options.</p>
             <button onClick={() => navigate('/resources/education')}>Learn More</button>
-          </div>
+          </div> */}
 
           {/* Card 4 */}
-          <div className="resource-card">
+          {/* <div className="resource-card">
             <div className="icon-circle">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M16.5,14a3,3,0,0,0-1.39.34l-2.9-2.9A3,3,0,0,0,13,10a3,3,0,0,0-6,0,3,3,0,0,0,.78,2l-2.32,3.11A3,3,0,0,0,4.5,15a3,3,0,1,0,3,3,3,3,0,0,0-.34-1.39L9.41,13.5a3,3,0,0,0,4.18,0l2.9,2.9A3,3,0,0,0,16.5,20a3,3,0,1,0,0-6Z"/>
@@ -64,7 +64,7 @@ function Resources() {
             <h2>Support Groups</h2>
             <p>Connect with others who understand what you're going through in safe and supportive environments.</p>
             <button onClick={() => navigate('/resources/support')}>Find Support</button>
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer />

@@ -12,6 +12,7 @@
 .profile-component-title {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
+  color:black;
 }
 
 .profile-component-error {
@@ -61,12 +62,12 @@
 }
 
 .profile-component-button.primary {
-  background-color: #764ba2;
+  background-color: #4b745c;
   color: white;
 }
 
 .profile-component-button.primary:hover:enabled {
-  background-color: #5a32a3;
+  background-color: #245539;
 }
 
 .profile-component-button.secondary {

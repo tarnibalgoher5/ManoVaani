@@ -1,105 +1,111 @@
-.container{
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(135deg, white);
-    color: #333;
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Container to cover full screen and center form */
+.container {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  /* background-color: #1b4636; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Properly wrap form content */
+.form-wrapper {
+  background-color: #245539;
+  margin-top: 0;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Headline */
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* Input fields */
+input[type="email"],
+input[type="password"] {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #67d99c;
+  box-shadow: 0 0 8px #b9f3cd;
+}
+
+/* Submit button */
+button[type="submit"] {
+  background-color: #67d99c;
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #49c186;
+}
+
+/* Error message */
+.error {
+  margin-top: 1rem;
+  color: #d93025;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Footer text */
+p {
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* Link button */
+.link-button {
+  background: none;
+  border: none;
+  color: #d1b3ff;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 1rem;
+  margin-left: 0.3rem;
+}
+
+.link-button:hover {
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-wrapper {
+    width: 90%;
+    padding: 1.5rem;
   }
-  
-  .app {
-    width: 100%;
-    max-width: 360px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgb(0 0 0 / 0.25);
-    padding: 2rem;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  h2 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  .form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  input[type="email"],
-  input[type="password"] {
-    padding: 0.75rem 1rem;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-  }
-  
-  input[type="email"]:focus,
-  input[type="password"]:focus {
-    outline: none;
-    border-color: #764ba2;
-    box-shadow: 0 0 8px #b494d4;
-  }
-  
-  button[type="submit"] {
-    background-color: #764ba2;
-    color: white;
-    border: none;
-    padding: 0.85rem 1rem;
-    font-size: 1.1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #5a32a3;
-  }
-  
-  .error {
-    margin-top: 1rem;
-    color: #d93025;
-    font-weight: bold;
-    font-size: 0.9rem;
-    text-align: center;
-  }
-  
-  p {
-    margin-top: 1rem;
-    text-align: center;
-  }
-  
-  .link-button {
-    background: none;
-    border: none;
-    color: #764ba2;
-    cursor: pointer;
-    font-weight: 600;
-    text-decoration: underline;
-    padding: 0;
-    font-size: 1rem;
-  }
-  
-  .link-button:hover {
-    color: #5a32a3;
-  }
-  
-  /* Mobile responsiveness */
-  @media (max-width: 400px) {
-    .app {
-      width: 90%;
-      padding: 1.5rem;
-    }
-  }
-  
+}

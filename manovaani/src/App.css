@@ -14,6 +14,10 @@
   --accent-color : #f6907d; /*  coral pink */
   --text-color : #000000; 
   --text-highlight-color: #245539; /*dark green */
+  --soft-darkgreen : 4b745c;#
+  --soft-lightgreen:#a1c4a0;
+  --white-green:#cbdbc3;
+  /* --:#849c8c; */ 
 }
 
 .logo {

@@ -16,11 +16,13 @@ function Footer() {
                     onClick={() => navigate('/')}
                 />
                 <p className='footer-txt'><i>manovaani - your safe haven powered AI driven care</i></p>
+                
                 <ul className="footer-nav">
                     <li className="footer-link" onClick={() => navigate('/')}>About Us</li>
                     <li className="footer-link" onClick={() => navigate('/survey')}>Survey</li>
                     <li className="footer-link" onClick={() => navigate('/resources')}>Resources</li>
                 </ul>
+              
             </div>
         </div> 
     ); 

@@ -1,7 +1,8 @@
 .footer {
-  background-image: linear-gradient(to bottom, white, #c5c5fe);
-  background-color: #c5c5fe;
+  /* background-image: linear-gradient(to bottom, white, #245539); */
+  background-color: #245539;
   padding: 20px 40px;
+  color:white;
   margin: auto 0 0;
   width: 99.38vw;
   margin-left: calc(-1 * (100vw - 100%) / 2);
@@ -13,14 +14,16 @@
 
 .footer-container {
   display: flex;
+  background-color: #245539;
   align-items: center;
+  color:white;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .footer-txt {
   font-size: 20px;
-  color: rgb(131, 11, 167);
+  color:white;
   padding-top: 25px;
   margin-left: 0;
   text-align: left;
@@ -33,6 +36,7 @@
 
 .footer-logo:hover {
   transform: scale(1.05);
+  /* color:white; */
 }
 
 .footer-nav {
@@ -41,6 +45,7 @@
   gap: 30px;
   padding: 0;
   margin: 0;
+  color: white;
 }
 
 .footer-nav li {
@@ -52,9 +57,10 @@
 }
 
 .footer-nav li:hover {
-  color: 
-#245539;
+  /* color: #245539; */
   font-weight: 400;
+  background-color: #245539;
+  color: white;
 }
 
 .footerText {
@@ -70,13 +76,15 @@
 
 .footerText > h6 {
   font-size: 20px;
-  color: 
-#245539;
+  color: #245539;
 }
 
 .footerText > h3, .footerText > h6 {
   padding: 0;
   margin: 0;
+}
+.footer-link{
+  color:white;
 }
 .footer-nav > .footer-link{
   text-decoration-line: none;

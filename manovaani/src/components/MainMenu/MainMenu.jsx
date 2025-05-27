@@ -6,6 +6,11 @@ import Journal from '../../assets/Journal.png';
 import ChatLogo2 from '../../assets/ChatLogo2.png';
 import ChatLogo from '../../assets/ChatLogo.png';
 import Survey2 from '../../assets/Survey2.png';
+import survey from '../../assets/survey.png';
+import img from '../../assets/img.png';
+import diary from '../../assets/diary.png';
+import collage2 from '../../assets/collage.png';
+import mainmenu from '../../assets/mainmenu.png';
 
 function MainMenu() {
   return (
@@ -15,12 +20,15 @@ function MainMenu() {
       <div className="section-intro">
         <div className="intro-text">
           <p className='site-title'>Chat,Journal,Take surveys</p>
-          <p className="site-description"><i>your safe haven powered with AI-driven care</i> </p> 
-          <p className='site-desc2'> manovaani is your digital companion for emotional wellness</p>
-        </div>
+          <p className="site-description">your safe haven powered with AI-driven care</p> 
+          <p className='site-desc2'> manovaani - digital companion for emotional wellness</p>
+        </div> 
         <div className="intro-image">
-          <img src={HomeImg} alt="Mental Health" />
-        </div>
+          <img src={mainmenu} alt="Mental Health" />
+          {/* <img src={survey} id="img2"></img> */}
+        {/* <img src={diary}  id="img3" alt="" /> */}
+        </div> 
+        {/* <div><button></button></div> */}
       </div>
 
       {/* Section 2: Problems Faced */}
@@ -47,7 +55,7 @@ function MainMenu() {
         <h2>Services Offered</h2>
 
         <div className="service-item">
-          <img  src={ChatLogo2} alt="Chatbot" className="service-image-left" />
+          <img  src={img} alt="Chatbot" className="service-image-left chatbot-img" />
           <div className="service-info">
           <h3 className='serviceText'>
             <a href="https://manovaani-chatbot.streamlit.app/" 
@@ -72,13 +80,13 @@ function MainMenu() {
               Write, reflect, and track your emotional journey securely and privately.
             </p>
           </div>
-          <img src={Journal} alt="Journal" className="service-image-right" />
+          <img src={diary} alt="Journal" className="service-image-right journal-img" />
         </div>
 
         <div className="service-item">
-          <img src={Survey2} alt="Surveys" className="service-image-left" />
+          <img src={survey} alt="Surveys" className="service-image-left survey-img" />
           <div className="service-info">
-            <Link to="/surveys" className="service-link">
+            <Link to="/survey" className="service-link">
               <h3>Surveys</h3> 
             </Link>
             <p className="service-desc">
@@ -96,7 +104,7 @@ function MainMenu() {
           <input type="text" placeholder="Your Name" required />
           <input type="email" placeholder="Your Email" required />
           <textarea placeholder="Your Message" required></textarea>
-          <button type="submit">Send</button>
+          <button type="submit" id="btn-send">Send</button>
         </form>
         </div> 
       </div> 
