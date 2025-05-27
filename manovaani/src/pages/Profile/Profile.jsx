@@ -53,7 +53,8 @@ const Profile = ({ userData }) => {
 
   return (
     <div> 
-       <Navbar /> 
+       {/* <Navbar />  */}
+         <Navbar user={userData} /> 
     <div className="profile-component-container">
      
       <h2 className="profile-component-title">Your ManoVaani Profile</h2>

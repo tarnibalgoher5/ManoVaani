@@ -98,7 +98,8 @@
 
 .intro-image img {
   /* height: 180px; */
-  width: 60%;
+  width: 80%;
+
   object-fit: contain;
 }
 
@@ -153,20 +154,25 @@ height: 30%;
 .service-item {
   display: flex;
   align-items: center;
-  /* margin-bottom: 40px; */
+  margin-bottom: 15px;
 }
 
 .service-item.reverse {
   flex-direction: row-reverse;
+  margin-bottom: 15px;
+
 }
 
 .service-image-left,
 .service-image-right {
+  margin: 0 25px 15px 0;
+  border-radius: 0%; 
+}
+
+
+.survey-img{
   width: 220px;
   height: 220px;
-  /* object-fit: contain; */
-  margin: 0 25px 15px 0;
-  border-radius: 50%; 
 }
 
 .service-image-left{

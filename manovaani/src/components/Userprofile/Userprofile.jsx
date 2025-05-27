@@ -78,7 +78,7 @@ function UserProfile() {
               <button onClick={toggleEditMode} className="save-btn">Save</button>
               <button onClick={() => setEditMode(false)} className="cancel-btn">Cancel</button>
             </div>
-          </div>
+          </div> 
         )}
 
         {/* Logout button at the bottom */}

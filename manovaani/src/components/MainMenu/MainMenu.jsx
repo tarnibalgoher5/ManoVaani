@@ -9,8 +9,8 @@ import Survey2 from '../../assets/Survey2.png';
 import survey from '../../assets/survey.png';
 import img from '../../assets/img.png';
 import diary from '../../assets/diary.png';
+import collage2 from '../../assets/collage.png';
 import mainmenu from '../../assets/mainmenu.png';
-import collage from '../../assets/collage.png';
 
 function MainMenu() {
   return (
@@ -24,7 +24,7 @@ function MainMenu() {
           <p className='site-desc2'> manovaani - digital companion for emotional wellness</p>
         </div> 
         <div className="intro-image">
-          <img src={collage} alt="Mental Health" />
+          <img src={mainmenu} alt="Mental Health" />
           {/* <img src={survey} id="img2"></img> */}
         {/* <img src={diary}  id="img3" alt="" /> */}
         </div> 
@@ -55,7 +55,7 @@ function MainMenu() {
         <h2>Services Offered</h2>
 
         <div className="service-item">
-          <img  src={img} alt="Chatbot" className="service-image-left" />
+          <img  src={img} alt="Chatbot" className="service-image-left chatbot-img" />
           <div className="service-info">
           <h3 className='serviceText'>
             <a href="https://manovaani-chatbot.streamlit.app/" 
@@ -80,11 +80,11 @@ function MainMenu() {
               Write, reflect, and track your emotional journey securely and privately.
             </p>
           </div>
-          <img src={diary} alt="Journal" className="service-image-right" />
+          <img src={diary} alt="Journal" className="service-image-right journal-img" />
         </div>
 
         <div className="service-item">
-          <img src={survey} alt="Surveys" className="service-image-left" />
+          <img src={survey} alt="Surveys" className="service-image-left survey-img" />
           <div className="service-info">
             <Link to="/survey" className="service-link">
               <h3>Surveys</h3> 

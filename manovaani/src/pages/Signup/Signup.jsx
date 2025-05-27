@@ -86,14 +86,15 @@ const SignUp = () => {
           autoComplete="new-password"
         />
         <button type="submit">Sign Up</button>
-      </form>
-      {error && <p className="error">{error}</p>}
+        {error && <p className="error">{error}</p>}
       <p>
         Already have an account?{" "}
         <button className="link-button" onClick={() => navigate("/signin")}>
           Sign In
         </button>
       </p>
+      </form>
+      
     </div>
   );
 };
